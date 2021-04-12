@@ -31,12 +31,12 @@ export const CurrentQuestion = () => {
   }
 
   if (!question) {
-    return <h1>Oh no! I could not find the current question!</h1>;
+    return <h2 className="section-title">Oh no! I could not find the current question!</h2>;
   }
 
   return (
     <div>
-      <h1>Question: {question.questionText}</h1>
+      <h2 className="section-title">Question: {question.questionText}</h2>
       <ul>
         {question.options.map((option, index) => (
           <li key={option}>
@@ -52,6 +52,7 @@ export const CurrentQuestion = () => {
       </ul>
       <button
         type="button"
+        className="round-button"
         onClick={handleSubmit}>
         Next
       </button>

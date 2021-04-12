@@ -33,11 +33,11 @@ export const Summary = () => {
 
   return (
     <div>
-      <h1>Summary</h1>
+      <h2 className="section-title">Summary</h2>
       <p>
         {correctAnswer} / {maxQuestions}
       </p>
-      <button type="submit" onClick={() => dispatch(quiz.actions.restart())}>Restart</button>
+      <button type="submit" className="round-button" onClick={() => dispatch(quiz.actions.restart())}>Restart</button>
     </div>
   );
 };
