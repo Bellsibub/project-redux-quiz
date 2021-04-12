@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+
+import { quiz } from 'reducers/quiz';
 
 // import { useSelector, useDispatch } from 'react-redux';
 // import { quiz } from 'reducers/quiz';
@@ -13,6 +15,7 @@ import { useSelector } from 'react-redux';
  */
 export const Summary = () => {
   const answers = useSelector((state) => state.quiz.answers);
+  const maxQuestions = useSelector((state) => state.quiz.questions.length);
   console.log(answers);
   const [correctAnswer, setCorrectAnswer] = useState(0);
   const getCorrectAnswers = () => {
@@ -23,12 +26,18 @@ export const Summary = () => {
 
   useEffect(() => {
     getCorrectAnswers();
+    // eslint-disable-next-line
   }, []);
+
+  const dispatch = useDispatch();
 
   return (
     <div>
       <h1>Summary</h1>
-      <p>{correctAnswer}</p>
+      <p>
+        {correctAnswer} / {maxQuestions}
+      </p>
+      <button type="submit" onClick={() => dispatch(quiz.actions.restart())}>Restart</button>
     </div>
   );
 };

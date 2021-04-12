@@ -119,7 +119,7 @@
     "react/sort-comp": "off",
     "react/jsx-indent": "off",
     "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": 0,
+    "react-hooks/exhaustive-deps": "off",
     "semi": "off",
     "linebreak-style": 0
   }
