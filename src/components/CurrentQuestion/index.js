@@ -13,7 +13,6 @@ export const CurrentQuestion = () => {
   const maxQuestions = useSelector((state) => state.quiz.questions.length);
   const answers = useSelector((state) => state.quiz.answers);
   const [isSubmitted, setSubmitted] = useState();
-  const [isCorrect, setCorrect] = useState();
 
   const dispatch = useDispatch();
 
@@ -22,10 +21,10 @@ export const CurrentQuestion = () => {
       if (answers[currentQ].isCorrect) {
         return <p>That is correct!</p>;
       } else {
-        return <p>That was the wrong answer</p>
+        return <p>That was the wrong answer</p>;
       }
     } else {
-      return null
+      return null;
     }
   };
   const handleChange = (i) => {
@@ -34,11 +33,9 @@ export const CurrentQuestion = () => {
   const handleSubmit = () => {
     dispatch(quiz.actions.submitAnswer({ questionId: question.id, answerIndex }));
     setSubmitted(true);
-    console.log(isCorrect);
   };
   const handleGoToNext = () => {
     setSubmitted(false);
-    setCorrect(null);
     dispatch(quiz.actions.goToNextQuestion());
   };
 
