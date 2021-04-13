@@ -1,0 +1,14 @@
+.results {
+    
+  display: block;
+  width: 100%;
+  padding: 16px 0;
+  text-align: center;
+  background-color: white;
+  border-radius: 4px;
+  background: #e8e9fe;
+  border: 1px solid #878dd7;
+  color: #717af1;
+  
+}
+

@@ -1,17 +1,26 @@
 main{
-    margin: 0 auto;
-    max-width: 500px;
-    background-color: rgba(251, 250, 255, 0.5);
-    border-radius: 25px;
-    border: 1px solid black;
-    box-shadow: 0 9px 12px -1px #e3e3fb;
-    padding: 80px 16px 16px 16px;
-    text-align: center;
-    border: 1px solid #dfe1f6;
+  margin: 0 auto;
+  max-width: 500px;
+  background-color: rgba(251, 250, 255, 0.5);
+  border-radius: 25px;
+  box-shadow: 0 9px 12px -1px #e3e3fb;
+  padding: 80px 16px 16px 16px;
+  text-align: center;
+  border: 1px solid #dfe1f6;
 }
 
 @media (min-width: 768px) {
-    main{        
-        padding: 40px 130px;
-    }
+  main{        
+    padding: 40px 130px;
+  }
+  .blobs {
+    max-width: 900px;
+    margin: 0 auto;
+    background-image: url(../../assets/circleLarge.svg), url(../../assets/circleMedium.svg),
+      url(../../assets/circleSmall.svg), url(../../assets/circleXSmall.svg);
+    background-position: 92% 87%, 12% 8%, 22% 92%, 73% 4%;
+    background-repeat: no-repeat;
+    padding: 100px 100px 180px 100px;
+
+  }
 }

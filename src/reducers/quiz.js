@@ -4,15 +4,33 @@ import { createSlice } from '@reduxjs/toolkit';
 const questions = [
   {
     id: 1,
-    questionText: 'Who set the Olympic record for the 100m dash in 2012?',
-    options: ['Usain Bolt', 'Justin Gatlin', 'Tyson Gay', 'Asafa Powell'],
+    questionText: 'Which Apollo mission was the first one to land on the Moon?',
+    options: ['Apollo 11', 'Apollo 10', 'Apollo 9', 'Apollo 13'],
     correctAnswerIndex: 0
   },
   {
     id: 2,
-    questionText: 'When was Michael Phelps last named male World Swimmer of the Year?',
-    options: ['2012', '2014', '2016', '2018'],
+    questionText: 'If you planted the seeds of Quercus robur what would grow?',
+    options: ['Flowers', 'Vegtables', 'Grains', 'Trees'],
+    correctAnswerIndex: 3
+  },
+  {
+    id: 3,
+    questionText: 'Which gas forms about 78% of the Earth atmosphere?"',
+    options: ['Nitrogen', 'Oxygen', 'Argon', 'Carbon Dioxide'],
+    correctAnswerIndex: 0
+  },
+  {
+    id: 4,
+    questionText: 'Which musical artist was NOT featured as playable avatars in the game DJ Hero?',
+    options: ['DJ Shadow', 'Daft Punk', 'Dr. Dre', 'Grandmaster Flash'],
     correctAnswerIndex: 2
+  },
+  {
+    id: 5,
+    questionText: 'The first half-hour CGI cartoon, ReBoot, aired on which year?',
+    options: ['1993', '1994', '1998', '1999'],
+    correctAnswerIndex: 1
   }
 ];
 

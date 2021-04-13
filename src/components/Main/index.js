@@ -9,8 +9,10 @@ export const Main = () => {
   const quizOver = useSelector((state) => state.quiz.quizOver)
 
   return (
-    <main>
-      {quizOver ? <Summary /> : <CurrentQuestion />}
-    </main>
+    <div className="blobs">
+      <main>
+        {quizOver ? <Summary /> : <CurrentQuestion />}
+      </main>
+    </div>
   );
 };
