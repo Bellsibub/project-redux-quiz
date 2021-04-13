@@ -55,6 +55,7 @@ export const CurrentQuestion = () => {
         {question.options.map((option, index) => (
           <li key={option}>
             <input
+              disabled={isSubmitted}
               className="input-radio"
               type="radio"
               id={option}

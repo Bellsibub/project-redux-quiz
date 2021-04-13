@@ -1,6 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-// Change these to your own questions!
 const questions = [
   {
     id: 1,
@@ -22,7 +21,8 @@ const questions = [
   },
   {
     id: 4,
-    questionText: 'Which musical artist was NOT featured as playable avatars in the game DJ Hero?',
+    questionText:
+      'Which musical artist was NOT featured as playable avatars in the game DJ Hero?',
     options: ['DJ Shadow', 'Daft Punk', 'Dr. Dre', 'Grandmaster Flash'],
     correctAnswerIndex: 2
   },
@@ -45,21 +45,6 @@ export const quiz = createSlice({
   name: 'quiz',
   initialState,
   reducers: {
-    /**
-     * Use this action when a user selects an answer to the question.
-     * The answer will be stored in the `quiz.answers` state with the
-     * following values:
-     *
-     *    questionId  - The id of the question being answered.
-     *    answerIndex - The index of the selected answer from the question's options.
-     *    question    - A copy of the entire question object, to make it easier to show
-     *                  details about the question in your UI.
-     *    answer      - The answer string.
-     *    isCorrect   - true/false if the answer was the one which the question says is correct.
-     *
-     * When dispatching this action, you should pass an object as the payload with `questionId`
-     * and `answerIndex` keys. See the readme for more details.
-     */
     submitAnswer: (state, action) => {
       const { questionId, answerIndex } = action.payload;
       const question = state.questions.find((q) => q.id === questionId);
@@ -85,13 +70,6 @@ export const quiz = createSlice({
       });
     },
 
-    /**
-     * Use this action to progress the quiz to the next question. If there's
-     * no more questions (the user was on the final question), set `quizOver`
-     * to `true`.
-     *
-     * This action does not require a payload.
-     */
     goToNextQuestion: (state) => {
       if (state.currentQuestionIndex + 1 === state.questions.length) {
         state.quizOver = true;
@@ -100,13 +78,6 @@ export const quiz = createSlice({
       }
     },
 
-    /**
-     * Use this action to reset the state to the initial state the page had
-     * when it was loaded. Who doesn't like re-doing a quiz when you know the
-     * answers?!
-     *
-     * This action does not require a payload.
-     */
     restart: () => {
       return initialState;
     }

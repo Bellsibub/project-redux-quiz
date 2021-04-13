@@ -16,7 +16,6 @@ export const Summary = () => {
 
   useEffect(() => {
     getCorrectAnswers();
-    // eslint-disable-next-line
   }, []);
 
   const dispatch = useDispatch();

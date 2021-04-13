@@ -1,4 +1,4 @@
-main{
+main {
   margin: 0 auto;
   max-width: 500px;
   background-color: rgba(251, 250, 255, 0.5);
@@ -10,17 +10,17 @@ main{
 }
 
 @media (min-width: 768px) {
-  main{        
+  main {
     padding: 40px 130px;
   }
   .blobs {
     max-width: 900px;
     margin: 0 auto;
-    background-image: url(../../assets/circleLarge.svg), url(../../assets/circleMedium.svg),
-      url(../../assets/circleSmall.svg), url(../../assets/circleXSmall.svg);
+    background-image: url(../../assets/circleLarge.svg),
+      url(../../assets/circleMedium.svg), url(../../assets/circleSmall.svg),
+      url(../../assets/circleXSmall.svg);
     background-position: 92% 87%, 12% 8%, 22% 92%, 73% 4%;
     background-repeat: no-repeat;
     padding: 100px 100px 180px 100px;
-
   }
 }
