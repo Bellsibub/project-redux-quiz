@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { quiz } from 'reducers/quiz';
 
+import './style.css'
+
 /**
  * Contains:
  * Question title
@@ -35,18 +37,20 @@ export const CurrentQuestion = () => {
   }
 
   return (
-    <div>
+    <div className="wrapper-question">
+      <p className="progress">Question {question.id} of {maxQuestions}</p>
       <h2 className="section-title">Question: {question.questionText}</h2>
-      <ul>
+      <ul className="answers">
         {question.options.map((option, index) => (
           <li key={option}>
             <input
+              className="input-radio"
               type="radio"
               id={option}
               name="options"
               value={option}
               onChange={() => handleChange(index)} />
-            <label htmlFor={option}>{option}</label>
+            <label className="input-label" htmlFor={option}>{option}</label>
           </li>
         ))}
       </ul>
@@ -56,7 +60,6 @@ export const CurrentQuestion = () => {
         onClick={handleSubmit}>
         Next
       </button>
-      <p>{question.id}/{maxQuestions}</p>
     </div>
   );
 };

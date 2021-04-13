@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  padding: 0 16px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -19,7 +20,12 @@ ul, li{
   padding: 0;
 }
 
+label {
+  font-size: .8em;
+}
+
 .section-title {
+  font-size: 1em;
   color: #13204c;
   line-height: 30px;
   background-color: white;
@@ -39,5 +45,14 @@ ul, li{
   width: 130px;
   border: none;
   border-radius: 50px;
+  margin: 50px 0;
+}
 
+@media (min-width: 768px) {
+  .section-title {
+    font-size: 1.5em;
+  }
+  label {
+    font-size: 1.2em;
+  }
 }

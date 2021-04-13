@@ -1,0 +1,53 @@
+.wrapper-question{
+  position: relative;
+}
+.answers {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  justify-content: center;
+}
+
+.input-radio {
+  visibility: hidden;
+}
+
+.input-label {
+  border: 1px solid red;
+  display: block;
+  width: 100%;
+  padding: 16px 0;
+  text-align: center;
+  background-color: white;
+  border: 1px solid #dfe1f6;
+  border-radius: 4px;
+  color: #13204c;
+  transition: all 0.3s ease-in-out;
+}
+
+.input-label:hover {
+  cursor: pointer;
+  border: 1px solid #878dd7;
+}
+
+input:checked + label {
+  background: #e8e9fe;
+  border: 1px solid #878dd7;
+  color: #878dd7;
+}
+
+.progress {
+  position: absolute;
+  font-size: 12px;
+  color: white;
+  box-shadow: 0 9px 12px -1px #e3e3fb;
+  background: #717af1;
+  padding: 1em;
+  width: 130px;
+  border: none;
+  border-radius: 50px;
+  margin: 0;
+  left: 50%;
+  top: -25px;
+  transform: translateX(-50%);
+}

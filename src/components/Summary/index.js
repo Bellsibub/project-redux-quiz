@@ -16,12 +16,11 @@ import { quiz } from 'reducers/quiz';
 export const Summary = () => {
   const answers = useSelector((state) => state.quiz.answers);
   const maxQuestions = useSelector((state) => state.quiz.questions.length);
-  console.log(answers);
-  const [correctAnswer, setCorrectAnswer] = useState(0);
+  const [correctAnswer, setCorrectAnswer] = useState([]);
+
   const getCorrectAnswers = () => {
-    answers.map((answer) => {
-      return answer.isCorrect && setCorrectAnswer(correctAnswer + 1);
-    });
+    const correctAnswers = answers.filter((answer) => answer.isCorrect)
+    setCorrectAnswer(correctAnswers);
   };
 
   useEffect(() => {
@@ -35,9 +34,15 @@ export const Summary = () => {
     <div>
       <h2 className="section-title">Summary</h2>
       <p>
-        {correctAnswer} / {maxQuestions}
+        CORRECT ANSWERS:
+        {correctAnswer.length} / {maxQuestions}
       </p>
-      <button type="submit" className="round-button" onClick={() => dispatch(quiz.actions.restart())}>Restart</button>
+      <button
+        type="submit"
+        className="round-button"
+        onClick={() => dispatch(quiz.actions.restart())}>
+        Restart
+      </button>
     </div>
   );
 };
